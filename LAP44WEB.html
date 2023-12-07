@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+            width: 100%;
+            position: absolute;
+        }
+
+        .header {
+            padding: 80px;
+            color: white;
+            text-align: center;
+            background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fimageio.forbes.com%2Fspecials-images%2Fimageserve%2F5fd00ea644cd62376ce2b6c1%2FIn-this-photo-illustration-a-13inch-Macbook-pro-seen---%2F960x0.jpg%3Fheight%3D474%26width%3D711%26fit%3Dbounds&tbnid=x3AqTU_aecHaJM&vet=12ahUKEwi7_ufgu8CCAxXfR2wGHePcCVYQMyg_egUIARDTAQ..i&imgrefurl=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fewanspence%2F2023%2F06%2F27%2Fapple-macbook-pro-m2-macbook-air-15-inch-specs-price%2F&docid=6Yyv_zkqDTpzYM&w=711&h=474&q=macbook&ved=2ahUKEwi7_ufgu8CCAxXfR2wGHePcCVYQMyg_egUIARDTAQ");
+            background-size: cover;
+            background-position-y: 80cm;
+        }
+
+        .header h1 {
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        .fakeimg {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .new {
+            background-color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .new :hover {
+            background-color: white;
+            color: grey;
+        }
+
+        .table1 {
+            border-collapse: collapse;
+            border-spacing: 10px;
+        }
+
+        .td1 {
+            border: 2px solid rgb(211, 211, 211);
+            padding: 0px;
+            text-align: center;
+        }
+
+        .table2 {
+            border-collapse: collapse;
+            border-spacing: 10px;
+        }
+
+        .radius-tbl2 {
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .table3 {
+            border-collapse: collapse;
+            border-spacing: 10px;
+        }
+
+        .radius-tbl3 {
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .scrollable-table {
+            width: 300px;
+            height: 430px;
+            overflow-y: scroll;
+        }
+
+        .scrollable-table table {
+            width: 100%;
+        }
+
+        .scrollable-table th,
+        .scrollable-table td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        .post1 {
+            background-color: #7C81AD;
+            width: 100%;
+            height: 50px;
+        }
+
+        .post2 {
+            background-color: #4B527E;
+            width: 100%;
+            height: 50px;
+        }
+
+        .post3 {
+            background-color: #2E4374;
+            width: 100%;
+            height: 50px;
+        }
+
+        .th {
+            color: white;
+            text-align: left;
+        }
+
+        .h2 {
+            color: red;
+        }
+
+        .table4 {
+            background-color: #EBE3D5;
+            width: 300px;
+            height: 10px;
+            overflow-y: scroll;
+            text-align: left;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .table-ftr {
+            border-collapse: separate;
+            border-spacing: 10px;
+            width: 50%;
+            height: 80%;
+        }
+
+        .td-ftr {
+            border: 2px solid rgb(211, 211, 211);
+            padding: 0px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        form {
+            margin: 50px;
+            padding: 20px;
+            background-color: #eba9a9;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            position: relative;
+            padding: 15px;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .navbar li:hover {
+            background-color: #ea8484;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .sub-tabs {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        .navbar li:hover .sub-tabs {
+            display: flex;
+        }
+
+        .sub-tabs a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .sub-tabs ul:hover {
+            background-color: #ea8484;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>MacBook Second</h1>
+        <p><i>"Menjual berbagai jenis MacBook Bekas"</i></p>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">HOME</a>
+            <li><a href="#">PRODUK</a></li>
+            <li><a href="#">MORE</a>
+                <div class="sub-tabs">
+                    <ul> <a href="#">Produk1</a></ul>
+                    <ul><a href="#">Produk2</a></ul>
+                    <ul> <a href="#">Produk3</a></a></ul>
+                </div>
+            </li>
+        </ul>
+        <li><a href="#" style="float:right">Login</a></li>
+    </nav>
+    <div class="topnav"></div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="new">
+                <div class="h2">
+                    <h2>New Produk</h2>
+                </div>
+                <h5>Title description, Dec 7, 2017</h5>
+                <table class="table1">
+                    <tr>
+                        <td class="td1"><img src="c:\Users\HP\Downloads\mc1.jpg" alt="Gambar 1" width="250"
+                                height="200">
+                            <p>Add a description of the</p>
+                            <p>image here</p>
+                        </td>
+                        <td class="td1"><img src="c:\Users\HP\Downloads\mc2.jpg" alt="Gambar 2" width="250"
+                                height="200">
+                            <p>Add a description of the</p>
+                            <p>image here</p>
+                        </td>
+                        <td class="td1"><img src="c:\Users\HP\Downloads\mc3.jpg" alt="Gambar 3" width="250"
+                                height="200">
+                            <p>Add a description of the</p>
+                            <p>image here</p>
+                        </td>
+                        <td class="td1">
+                            <img src="c:\Users\HP\Downloads\mc4.jpg" alt="Gambar 4" width="150" height="200">
+                            <p>Add a description of the</p>
+                            <p>image here</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="c:\Users\HP\Downloads\mc5.jpg" alt="Gambar 1" width="150" height="200">
+                            <p>Add a description of the</p>
+                            <p>image here</p>
+                        </td>
+                        <td class="td1">
+                            <img src="c:\Users\HP\Downloads\mc6.jpg" alt="Gambar 2" width="150" height="200">
+                            <p>Add a description of the</p>p>image here</p>
+                        </td>
+                        <td class="td1">
+                            <img src="c:\Users\HP\Downloads\mc7.jpg" alt="Gambar 3" width="200" height="200">
+                            <p>Add a description of the</p>
+                            <p>image here</p>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="card">
+                <h2>Trending</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+                <table class="table2">
+                    <tr>
+                        <td>
+                            <img class="radius-tbl2" src="gbr2.jpg" alt="Gambar 2" width="200%" height="200">
+                            <p>Content....</p>
+                            <table class="table2">
+                                <tr>
+                                    <td><img class="radius-tbl2" src="gbr2.jpg" alt="Gambar 2" width="200%"
+                                            height="200"></td>
+                                </tr>
+                            </table>
+                            <p>Some tetx....</p>
+                            <p>Content....</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Trending</h2>
+                <table class="table3">
+                    <tr>
+                        <td><img class="radius-tbl3" src="gbr4.jpeg" alt="Gambar 3" width="200" height="200"></td>
+                    </tr>
+                </table>
+                <p>Some text about me.....</p>
+                <table class="table3">
+                    <tr>
+                        <td>
+                            <img class="radius-tbl3" src="gbr2.jpg" alt="Gambar 4" width="200" height="200">
+                        </td>
+                    </tr>
+                </table>
+                <p>Some text about me.....</p>
+                <p>Content....</p>
+            </div>
+            <div class="card">
+                <h3>Popular Post</h3>
+                <table class="post1">
+                    <tr>
+                        <td>
+                        <th class="th">Trending 01</th>
+                        </td>
+                    </tr>
+                </table>
+                <table class="post2">
+                    <tr>
+                        <td>
+                        <th class="th">Trending 02</th>
+                        </td>
+                    </tr>
+                </table>
+                <table class="post3">
+                    <tr>
+                        <td>
+                        <th class="th">Trending 03</th>
+                        </td>tr>
+                </table>
+            </div>
+            <div class="card">
+                <h3>Follow Me</h3>
+                <div class="scrollable-table">
+                    <table class="table4">
+                        <tr>
+                            <td>
+                            <th>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tristique purus non dolor
+                                laoreet, at vehicular quam blandit. Duis vel lorem aliquet, volutpat libero vel,
+                                accumsan purus. Phasellus viverra, libero sit amet dictum tristique, massa justo
+                                tincidunt dui, eu facilisis mi quam sit amet erat. Suspendisse potenti. Aenean a risus
+                                eget lectus volutpat vehicula. Donec nec enim sed ipsum tincidunt lacinia. Sed id varius
+                                nulla. Fusce a purus in elit pellentesque fringilla a ut libero. Sed ut bibendum urna.
+                                Vivamus euismod lacinia varius. Nullam euismod, est acultrices ultricies, nunc justo
+                                ullamcorper arcu, at tincidunt justo justo non justo. Nunc dictum id dui utaliquam.
+                                Aliquam dignissim ac purus ac tristique. Sed sollicitudin odio at dictum. Fusce sed
+                                metus eget felisvolutpatmattis vel a ligula. Nulla laoreet, purus sed tempus tincidunt,
+                                massa arcu tristique orci, sit ametultriciesaugue urna at libero. In non libero vitae
+                                lectus hendrerit commodo. Proin fermentum ultricies tellus velultricies.Sed auctor
+                                interdum libero, nec sodales turpis imperdiet ac. Sed vitae libero in turpis auctor
+                                cursus. Nullam vehicula bibendum magna, vel tristique urna euismod vel. Nulla facilisi.
+                                Vestibulum nec loremdui.</th>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 id="form">Form Biodata</h3>
+    <form>
+        <label for="nama">First Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+        <label for="nama">Last Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+        <label for="negara">Country:</label>
+        <select id="negara" name="negara">
+            <option value="negara1">Indonesia</option>
+            <option value="negara2">Jepang</option>
+            <option value="negara3">Australia</option>
+        </select><br><br>
+        <input type="submit" value="Kirim">
+    </form>
+    <footer>@UIN Alauddin Makassar</footer>
+</body>
+</html>
